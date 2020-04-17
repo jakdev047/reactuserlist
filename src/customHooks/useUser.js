@@ -24,8 +24,16 @@ export const useUser = () => {
     }
   }
 
+  const clearUser = () => {
+    const res = window.confirm('All User Remove');
+    if (res === true) {
+      setAddUserItem([])
+    }
+  }
+
   return {
     addUsers,
-    addSetUserEvent
+    addSetUserEvent,
+    clearUser
   }
 }
