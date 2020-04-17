@@ -5,7 +5,7 @@ import { Card, CardBody, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { useUser } from '../../customHooks/useUser';
 
 const SalaryCard = () => {
-  const {addUsers,clearUser} = useUser();
+  const {addUsers,clearUser,removeUser} = useUser();
   return (
     <div className="salary-card">
       <Card className="single-user">
@@ -22,7 +22,9 @@ const SalaryCard = () => {
                   addUsers.map(p=>{
                     return <ListGroupItem key={p.id}>
                             {p.name}
-                            <Button style={{marginLeft:'10px'}}>X</Button>
+                            <Button style={{marginLeft:'10px'}} 
+                                    onClick={()=>removeUser(p.id)}
+                            >X</Button>
                           </ListGroupItem>
                   })
                 }

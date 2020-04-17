@@ -24,6 +24,10 @@ export const useUser = () => {
     }
   }
 
+  const removeUser = id => {
+    setAddUserItem(addUsers.filter(item=>item.id !== id));
+  }
+
   const clearUser = () => {
     const res = window.confirm('All User Remove');
     if (res === true) {
@@ -34,6 +38,7 @@ export const useUser = () => {
   return {
     addUsers,
     addSetUserEvent,
+    removeUser,
     clearUser
   }
 }
