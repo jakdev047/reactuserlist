@@ -1,4 +1,4 @@
-import { GET_USERS } from "../actions/types";
+import { GET_USERS, GET_ADD_USERS } from "../actions/types";
 
 const init = {
   users: [
@@ -392,7 +392,8 @@ const init = {
       },
       isClick:false,
     }
-  ] 
+  ],
+  addUsers:[]
 }
 
 const reducers = (state = init, action) => {
@@ -400,10 +401,15 @@ const reducers = (state = init, action) => {
     case GET_USERS:
       return {
         ...state,
-        users: state.users
-      }
+        users: action.payload
+      };
+    case GET_ADD_USERS:
+      return {
+        ...state,
+        addUsers: action.payload
+      };
     default:
-      return state
+      return state;
   }
 }
 

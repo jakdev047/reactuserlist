@@ -16,7 +16,7 @@ const UserItem = props => {
           </h2>
           <p><FontAwesomeIcon icon={faPhoneAlt}/> {phone} </p>
           <p><FontAwesomeIcon icon={faEnvelope}/> {email} </p>
-          <Button color="primary">Add</Button>
+          <Button color="primary" onClick={()=>props.addSetUserEvent(id)}>Add</Button>
         </CardBody>
       </Card>
     </Col>
