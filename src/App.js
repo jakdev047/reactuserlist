@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'reactstrap';
 
 // store
 import {Provider} from 'react-redux';
@@ -11,15 +10,14 @@ import './assets/index.scss';
 
 // components
 import Users from './components/Users/Users';
+import Header from './components/Header/Header';
 
 const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
-        <Container>
-          <h2>User List</h2>
-          <Users />
-        </Container>
+        <Header />
+        <Users />
       </div>
     </Provider>
     

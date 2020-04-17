@@ -2,10 +2,38 @@
 $primaryColor: #1a1d1c;
 $secondaryColor: #7dc4a6;
 
-h2 {
-  color: $primaryColor;
+
+// header
+.jumbotron {
+  padding: 20px 0;
+}
+a,a:hover{
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+// users
+.single-user {
+  text-align: center;
   transition: .3s;
-  &:hover{
-    color: $secondaryColor;
+  &.card {
+    padding: 20px;
+    margin-bottom: 30px;
   }
+  img.card-img-top {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  h3{
+    a{
+      color: $primaryColor;
+      transition: .3s;
+      &:hover {color: $secondaryColor;}
+    }
+  }
+
 }
