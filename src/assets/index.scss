@@ -28,12 +28,21 @@ img {
     border-radius: 50%;
     margin: 0 auto;
   }
-  h3{
+  h2{
     a{
+      font-size: 16px;
       color: $primaryColor;
       transition: .3s;
       &:hover {color: $secondaryColor;}
     }
   }
 
+}
+
+// salary-card
+.salary-card {
+  h3{
+    margin: 20px;
+    font-size: 20px;
+  }
 }
