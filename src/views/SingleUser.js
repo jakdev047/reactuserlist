@@ -19,6 +19,7 @@ const SingleUser = ({users}) => {
               <h2>{user.name}</h2>
               <p><FontAwesomeIcon icon={faPhoneAlt}/> {user.phone} </p>
               <p><FontAwesomeIcon icon={faEnvelope}/> {user.email} </p>
+              <h5>Yearly Salary: ${user.yearlySalary} </h5>
               <Link to="/">Back</Link>
             </CardBody>
           </Card>

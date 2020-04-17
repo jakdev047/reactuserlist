@@ -35,8 +35,13 @@ export const useUser = () => {
     }
   }
 
+  const total = addUsers.reduce((sum,curr)=>{
+    return sum + curr.yearlySalary;
+  },0)
+
   return {
     addUsers,
+    total,
     addSetUserEvent,
     removeUser,
     clearUser

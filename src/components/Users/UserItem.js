@@ -5,7 +5,7 @@ import { Col, Card, CardImg, CardBody, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const UserItem = props => {
-  const {id,img,name,phone,email} = props.user;
+  const {id,img,name,phone,email,yearlySalary} = props.user;
   return (
     <Col xl={4} lg={6}>
       <Card className="single-user">
@@ -16,6 +16,7 @@ const UserItem = props => {
           </h2>
           <p><FontAwesomeIcon icon={faPhoneAlt}/> {phone} </p>
           <p><FontAwesomeIcon icon={faEnvelope}/> {email} </p>
+          <p>Yearly Salary: ${yearlySalary} </p>
           <Button color="primary" onClick={()=>props.addSetUserEvent(id)}>Add</Button>
         </CardBody>
       </Card>
