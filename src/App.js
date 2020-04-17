@@ -13,6 +13,7 @@ import './assets/index.scss';
 import Header from './components/Header/Header';
 import Home from './views/Home';
 import SingleUser from './views/SingleUser';
+import Error from './views/Error';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/users/:id" component={SingleUser}></Route>
+            <Route path="*" component={Error}></Route>
           </Switch>
       </Router>
     </Provider>
