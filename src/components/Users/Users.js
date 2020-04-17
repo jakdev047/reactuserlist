@@ -1,13 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container, Row } from 'reactstrap';
+import { Row } from 'reactstrap';
 import UserItem from './UserItem';
 
 const Users = ({users}) => {
   return (
     <div>
-      {console.log(users) }
-      <Container>
         <Row>
           {
             users.map(user => {
@@ -15,7 +13,6 @@ const Users = ({users}) => {
             })
           }
         </Row>
-      </Container>
     </div>
   );
 };

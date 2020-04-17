@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
 // store
 import {Provider} from 'react-redux';
@@ -9,27 +10,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/index.scss';
 
 // components
-import Users from './components/Users/Users';
 import Header from './components/Header/Header';
-import SalaryCard from './components/SalaryCard/SalaryCard';
-import { Container, Row, Col } from 'reactstrap';
+import Home from './views/Home';
+import SingleUser from './views/SingleUser';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <div className="App">
-        <Header />
-        <Container>
-          <Row>
-            <Col lg={8}>
-              <Users />
-            </Col>
-            <Col lg={4}>
-              <SalaryCard />
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/users/:id" component={SingleUser}></Route>
+          </Switch>
+      </Router>
     </Provider>
     
   );
